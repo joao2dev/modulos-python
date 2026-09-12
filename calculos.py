@@ -1,7 +1,5 @@
 from typing import List, Dict
-from participantes import listar_participantes
 
-participantes = listar_participantes(["João", "Maria", "Pedro"])
 
 def calcular_total_gastos(despesas: List[dict]) -> float:
     """Calcula o valor total gasto em todas as despesas."""
@@ -43,14 +41,4 @@ def calcular_saldo_individual(despesas: List[dict], participantes: List[str]) ->
 
 
 
-despesas_teste = [
-    {"pagou": "João", "descricao": "Almoço", "valor": 150.0, "categoria": "Alimentação"},
-    {"pagou": "Maria", "descricao": "Gasolina", "valor": 80.0, "categoria": "Transporte"},
-    {"pagou": "João", "descricao": "Cinema", "valor": 60.0, "categoria": "Diversão"}
-]
 
-resultado = calcular_saldo_individual(despesas_teste, participantes)
-print(resultado)
-# Deve imprimir algo como:
-# {"João": 113.33, "Maria": -16.67, "Pedro": -96.67}
-# Deve imprimir: 96.66666... (290 / 3)
