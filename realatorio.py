@@ -2,7 +2,7 @@ from typing import List
 from calculos import calcular_total_gastos,calcular_gastos_individuais,calcular_saldo_individual,calcular_valor_medio_por_pessoa
 
 
-participantes_teste = ["João", "Maria","Pedro"]
+
 
 def imprimir_total_de_gastos(despesas: List[dict]) -> None:
     """Imprime o valor total de gastos da viagem"""
@@ -41,9 +41,4 @@ def imprimir_relatorio(despesas: List[dict], participantes: List[str]) -> None:
     print("")
     imprimir_saldo_individual(despesas, participantes)
 
-despesas_teste = [
-    {"pagou": "João", "descricao": "Almoço", "valor": 150.0, "categoria": "Alimentação"},
-    {"pagou": "Maria", "descricao": "Gasolina", "valor": 80.0, "categoria": "Transporte"},
-    {"pagou": "Pedro", "descricao": "Cinema", "valor": 60.0, "categoria": "Diversão"}
-]
-relatorio = imprimir_relatorio(despesas_teste,participantes_teste)
+

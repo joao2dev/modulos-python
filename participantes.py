@@ -17,26 +17,3 @@ def verificar_participante(nome: str, participantes: List[str]) -> bool:
     """Verifica se um participante ja esta na lista."""
     return nome.strip().title() in participantes
 
-participantes = []
-
-# Testa cadastro
-participantes = cadastrar_participante("João", participantes)
-print(participantes)  # Deve imprimir: ["João"]
-
-participantes = cadastrar_participante("Maria", participantes)
-print(participantes)  # Deve imprimir: ["João", "Maria"]
-
-# Testa se aceita duplicata (não deve)
-participantes = cadastrar_participante("João", participantes)
-print(participantes)  # Deve imprimir: ["João", "Maria"] (sem adicionar novamente)
-
-# Testa verificação
-existe = verificar_participante("João", participantes)
-print(existe)  # Deve imprimir: True
-
-existe = verificar_participante("Pedro", participantes)
-print(existe)  # Deve imprimir: False
-
-# Testa listagem
-lista = listar_participantes(participantes)
-print(lista)  # Deve imprimir: ["João", "Maria"]
